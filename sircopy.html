@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>And & Or</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="check()">
+        <label>Nationality: </label>
+        <select id="nat">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br><br>
+        <label>Education: </label>
+        <select id="edu">
+            <option value="Metric">Metric</option>
+            <option value="Inter">Inter</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Masters">Masters</option>
+        </select>
+        <br><br>
+        <label>Height : </label>
+        <input type="number" id="height">
+        <br><br>
+        <label>Age : </label>
+        <input type="number" id="age">
+        <br><br>
+        <button>Check</button>
+    </form>
+</body>
+<script>
+    function check() {
+        let nat = document.getElementById("nat").value;
+        let edu = document.getElementById("edu").value;
+        let height = parseInt(document.getElementById("height").value);
+        let age = parseInt(document.getElementById("age").value);
+
+        if(nat === "Yes" && height >= 6 && ((age >=18 && age <= 22)) || (age >= 22 && age <= 28 && edu === "Masters")){
+            alert("Invite for Interview")
+        }
+        else{
+            alert("Not Eligible")
+        }
+
+        // if (nat === "Yes" && height >= 5) {
+        //     if ((age >= 18 && age <= 22) || (age >= 18 && age <= 28 && edu === "Masters")) {
+        //         alert("Invite for Interview")
+        //     }
+        //     else {
+        //         alert("Not Eligible")
+        //     }
+        // }
+        // else {
+        //     alert("Not Eligible")
+        // }
+    }
+</script>
+
+</html>
